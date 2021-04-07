@@ -111,7 +111,8 @@ footer {
     transition-duration: 0.3s;
 }
 
-.img-left:hover {
+.img-left:hover,
+.selected {
     background: rgb(81, 214, 64);
     border-radius: 25%;
 }

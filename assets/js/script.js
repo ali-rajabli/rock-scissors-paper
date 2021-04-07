@@ -23,28 +23,50 @@ function draw() {
 var rock1 = document.getElementById("rock-1");
 var scissors1 = document.getElementById("scissors-1");
 var paper1 = document.getElementById("paper-1");
-var your_choice;
+var your_choice
+var computer_choice;
+
+function selectPictures () {
+    var idUser = your_choice + "-1";
+    var idComp = computer_choice + "-2";
+
+    document.getElementById(idUser).classList.add('selected');
+    document.getElementById(idComp).classList.add('selected');
+}
+
+function unselectPictures () {
+    var all = document.querySelectorAll('.selected');
+    for (let elem of all) {
+        elem.classList.remove('selected');
+    }
+}
 
 
 rock1.onclick = function() {
-    your_choice = 'r';
+    your_choice = 'rock';
+    compare();
 }
 
 scissors1.onclick = function() {
-    your_choice = 's';
+    your_choice = 'scissors';
+    compare();
 }
 
 paper1.onclick = function() {
-    your_choice = 'p';
+    your_choice = 'paper';
+    compare();
 }
 
 function compare() {
-    var choices_array = ["Rock", "Scissors", "Paper"];
-    var computer_choice = choices_array[Math.floor(Math.random() * 3)];
+    var choices_array = ["rock", "scissors", "paper"];
+    computer_choice = choices_array[Math.floor(Math.random() * 3)];
 
-    if ((your_choice == 'r' && computer_choice == "Rock") || (your_choice == 's' && computer_choice == "Scissors") || (your_choice == 'p' && computer_choice == "Paper")) {
+    unselectPictures();
+    selectPictures();
+
+    if (your_choice == computer_choice) {
         draw();
-    } else if ((your_choice == 'r' && computer_choice == "Scissor") || (your_choice == 's' && computer_choice == "Paper") || (your_choice == 'p' && computer_choice == "Rock")) {
+    } else if ((your_choice == 'rock' && computer_choice == "scissors") || (your_choice == 'scissors' && computer_choice == "paper") || (your_choice == 'paper' && computer_choice == "rock")) {
         win();
     } else {
         lose();
