@@ -26,7 +26,8 @@ body {
 
 #score-id {
     font-family: Comic Sans MS;
-    margin-bottom: 50px;
+    margin-top: 20px;
+    margin-bottom: 20px;
     font-weight: 600;
 }
 
@@ -64,7 +65,7 @@ footer {
 
 .main-container {
     width: 90%;
-    margin: 60px auto;
+    margin: 50px auto;
 }
 
 .left-section,
@@ -72,17 +73,17 @@ footer {
     flex-grow: 0;
     flex-shrink: 0;
     box-shadow: 0 0 10px #333;
-    padding: 20px;
+    padding: 15px;
     border: 5px solid #333;
 }
 
 .left-section {
     margin-right: auto;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
 }
 
 .vs-section {
-    margin-bottom: 30px;
+    margin-bottom: 10px;
 }
 
 .right-section {
