@@ -26,22 +26,6 @@ var paper1 = document.getElementById("paper-1");
 var your_choice
 var computer_choice;
 
-function selectPictures () {
-    var idUser = your_choice + "-1";
-    var idComp = computer_choice + "-2";
-
-    document.getElementById(idUser).classList.add('selected');
-    document.getElementById(idComp).classList.add('selected');
-}
-
-function unselectPictures () {
-    var all = document.querySelectorAll('.selected');
-    for (let elem of all) {
-        elem.classList.remove('selected');
-    }
-}
-
-
 rock1.onclick = function() {
     your_choice = 'rock';
     compare();
@@ -56,6 +40,23 @@ paper1.onclick = function() {
     your_choice = 'paper';
     compare();
 }
+
+function selectPictures() {
+    var idUser = your_choice + "-1";
+    var idComp = computer_choice + "-2";
+
+    document.getElementById(idUser).classList.add('selected');
+    document.getElementById(idComp).classList.add('selected');
+}
+
+function unselectPictures() {
+    var all = document.querySelectorAll('.selected');
+    for (let elem of all) {
+        elem.classList.remove('selected');
+    }
+}
+
+
 
 function compare() {
     var choices_array = ["rock", "scissors", "paper"];
