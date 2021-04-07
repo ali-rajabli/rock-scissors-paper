@@ -10,6 +10,10 @@ body {
     background-color: #ffea00;
 }
 
+.row {
+    --bs-gutter-x: 0rem;
+}
+
 
 /* ===========Head========== */
 
