@@ -20,35 +20,31 @@ function draw() {
 
 }
 
-
 var rock1 = document.getElementById("rock-1");
 var scissors1 = document.getElementById("scissors-1");
 var paper1 = document.getElementById("paper-1");
-
-var your_choice = [rock1, scissors1, paper1];
-
+var your_choice;
 
 
 rock1.onclick = function() {
-    return rock1 == your_choice;
+    your_choice = 'r';
 }
 
 scissors1.onclick = function() {
-    return scissors1 == your_choice;
+    your_choice = 's';
 }
 
 paper1.onclick = function() {
-    return paper1 == your_choice;
+    your_choice = 'p';
 }
-
 
 function compare() {
     var choices_array = ["Rock", "Scissors", "Paper"];
     var computer_choice = choices_array[Math.floor(Math.random() * 3)];
 
-    if ((your_choice == rock1 && computer_choice == "Rock") || (your_choice == scissors1 && computer_choice == "Scissor") || (your_choice == paper1 && computer_choice == "Paper")) {
+    if ((your_choice == 'r' && computer_choice == "Rock") || (your_choice == 's' && computer_choice == "Scissors") || (your_choice == 'p' && computer_choice == "Paper")) {
         draw();
-    } else if ((your_choice == rock1 && computer_choice == "Scissor") || (your_choice == scissors1 && computer_choice == "Paper") || (your_choice == paper1 && computer_choice == "Rock")) {
+    } else if ((your_choice == 'r' && computer_choice == "Scissor") || (your_choice == 's' && computer_choice == "Paper") || (your_choice == 'p' && computer_choice == "Rock")) {
         win();
     } else {
         lose();
