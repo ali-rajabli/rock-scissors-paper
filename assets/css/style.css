@@ -1,0 +1,122 @@
+html {
+    padding-bottom: 75px;
+    min-height: 100%;
+    box-sizing: border-box;
+    position: relative;
+}
+
+body {
+    height: 100%;
+    background-color: #ffea00;
+}
+
+
+/* ===========Head========== */
+
+#game-name {
+    font-family: MS PGothic;
+    margin: 40px 0;
+    font-weight: 800;
+    font-size: 44px;
+}
+
+#score-id {
+    font-family: Comic Sans MS;
+    margin-bottom: 50px;
+    font-weight: 600;
+}
+
+#logo>img {
+    position: absolute;
+    right: 0;
+    bottom: 63px;
+    height: 90px;
+    width: 140px;
+    transition-duration: 0.3s;
+}
+
+#logo>img:hover {
+    animation: forwards;
+}
+
+
+/* ===========Footer========== */
+
+footer {
+    position: absolute;
+    font-size: 1.3rem;
+    font-weight: 700;
+    line-height: 1;
+    color: #333;
+    background-color: gold;
+    border-top: 8px solid #333;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+
+/* ===========Main========== */
+
+.main-container {
+    width: 90%;
+    margin: 60px auto;
+}
+
+.left-section,
+.right-section {
+    flex-grow: 0;
+    flex-shrink: 0;
+    box-shadow: 0 0 10px #333;
+    padding: 20px;
+}
+
+.left-section {
+    margin-right: auto;
+    margin-bottom: 30px;
+}
+
+.vs-section {
+    margin-bottom: 30px;
+}
+
+.right-section {
+    margin-left: auto;
+    margin-bottom: 30px;
+}
+
+
+/* ===========Text AND Images========== */
+
+#vs-text {
+    font-size: 40px;
+    font-weight: 800;
+    margin-top: 50px;
+}
+
+.img-size {
+    height: 100px;
+    width: 120px;
+}
+
+#personal-label {
+    font-family: Comic Sans MS;
+    color: #333;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.img-left {
+    cursor: pointer;
+    transition-duration: 0.3s;
+}
+
+.img-left:hover {
+    background: rgb(81, 214, 64);
+    border-radius: 25%;
+}
+
+.right-section>img {
+    margin-left: 10px;
+    margin-right: 10px;
+}
